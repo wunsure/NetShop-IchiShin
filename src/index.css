@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans;
+}
+
+/* 無限滾動動畫 */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller-inner {
+  /* 1. 將動畫時間從 40s 改為 20s，速度加倍 */
+  animation: scroll 20s linear infinite;
+}
+
+/* 2. 使用 :has() 讓暫停規則更精確，只有當鼠標懸停在 scroller-item 上時才觸發 */
+.scroller-container:has(.scroller-item:hover) .scroller-inner {
+  animation-play-state: paused;
+}
+
+
+/* 隱藏滾動條 */
+.scroller-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroller-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
