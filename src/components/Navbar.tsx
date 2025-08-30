@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { type Product, type Category } from "./data/products";
 import { type CartItem } from "../hooks/useCart";
-import { Menu, X, Search, User, ShoppingBag } from "lucide-react";
+import { Menu, X, User, ShoppingBag } from "lucide-react";
 
 interface NavbarProps {
   cartItems: CartItem[];

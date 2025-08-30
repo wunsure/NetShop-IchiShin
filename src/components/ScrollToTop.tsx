@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 // 2. 將 props 類型從 HTMLElement 改為更精確的 HTMLDivElement
 interface ScrollToTopProps {
-  containerRef: RefObject<HTMLDivElement| null>;
+  containerRef?: RefObject<HTMLDivElement| null>;
 }
 
 const ScrollToTop: React.FC<ScrollToTopProps> = ({ containerRef }) => {

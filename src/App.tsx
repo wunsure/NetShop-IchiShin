@@ -42,7 +42,7 @@ function App() {
     // 3. 將 ref 綁定到最外層的 div 上
     <div ref={mainContainerRef} className="flex flex-col h-screen overflow-y-auto bg-white overflow-x-hidden">
       {/* 4. 將 ref 作為 prop 傳遞給 ScrollToTop */}
-      <ScrollToTop containerRef={mainContainerRef!} />
+      <ScrollToTop containerRef={mainContainerRef} />
       <Navbar 
         cartItems={cartItems}
         onCartClick={openCart}
