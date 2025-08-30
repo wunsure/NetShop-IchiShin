@@ -38,8 +38,15 @@ const Hero: React.FC<HeroProps> = ({ product }) => {
         <div className="mt-8">
           <Link
             to={`/products/${product.id}`}
-            // 3. 按鈕樣式調整為白色，以在深色背景上脫穎而出
-            className="inline-block bg-white text-black font-bold text-lg px-10 py-4 rounded-md hover:bg-gray-200 transition-colors duration-300"
+            className="
+      inline-block 
+      bg-white text-gray-700 font-bold 
+      rounded-md 
+      px-6 py-3 text-base    /* 手機尺寸 */
+      sm:px-10 sm:py-4 sm:text-lg  /* 桌面尺寸 */
+      hover:bg-gray-200 
+      transition-colors duration-300
+    "
           >
             Shop Now
           </Link>

@@ -19,7 +19,7 @@ const NewArrivals: React.FC<NewArrivalsProps> = ({ products, onAddToCart }) => {
 
   return (
     <section className="py-16 px-4 md:px-32">
-      <h2 className="text-3xl font-bold text-center mb-12">New Arrivals</h2>
+      <h2 className="text-3xl text-gray-700 font-bold text-center mb-12">New Arrivals</h2>
       {/* 1. grid-cols-1 を grid-cols-2 に変更 */}
       <ul className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {productsToShow.map((product) => (

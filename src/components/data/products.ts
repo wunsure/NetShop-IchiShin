@@ -1,5 +1,5 @@
 // 定義產品物件的介面（型別）
-export type Category = 'SUV' | 'COLLABS' | 'BUNDLES' | 'SUMMERWEEN' | 'MERCH';
+export type Category = 'SUV' | 'TRUCK' | 'RACING' | 'FAMILY' | 'EMERGENCY VEHICLES';
 
 export interface Product {
   id: number;
@@ -16,7 +16,7 @@ export interface Product {
 }
 
 // 導出分類列表，方便在Navbar中使用
-export const categories: Category[] = ['SUV', 'COLLABS', 'BUNDLES', 'SUMMERWEEN', 'MERCH'];
+export const categories: Category[] = ['SUV', 'TRUCK', 'RACING', 'FAMILY', 'EMERGENCY VEHICLES'];
 
 // 導出我們的產品資料
 export const initialProducts: Product[] = [
@@ -60,7 +60,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A beautifully crafted leather shoulder bag. Its minimalist design and exquisite details make it suitable for any event.",
     longDescription: "Elevate your accessory collection with this impeccably crafted shoulder bag, made from genuine, full-grain leather that will develop a rich patina over time. The structured silhouette is both modern and timeless, featuring clean lines and polished hardware for a touch of understated luxury. The main compartment, lined with soft yet durable twill, is surprisingly spacious and includes a secure interior zip pocket for your valuables and two slip pockets for easy organization.\n\nThe adjustable shoulder strap allows for versatile styling, letting you wear it comfortably on the shoulder or as a crossbody. Every detail, from the hand-stitched seams to the discreetly embossed logo, reflects a commitment to superior quality and craftsmanship. This bag is a statement of elegance that seamlessly transitions from day to night.",
-    category: "COLLABS"
+    category: "TRUCK"
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ export const initialProducts: Product[] = [
     ],
     description: "Lightweight and simple, these sneakers provide excellent cushioning and support for ultimate comfort during exercise.",
     longDescription: "Discover the perfect blend of style and performance with our Minimalist Sneakers. Engineered with a lightweight, breathable knit upper, these shoes conform to the shape of your foot for a sock-like fit and superior ventilation. The responsive foam midsole provides exceptional cushioning and energy return with every step, reducing fatigue and maximizing comfort whether you're on a run or navigating a busy day.\n\nThe durable rubber outsole features a versatile traction pattern for reliable grip on various surfaces. With their clean, uncluttered design and subtle branding, these sneakers are the epitome of modern athletic footwear, effortlessly pairing with everything from workout gear to casual weekend wear.",
-    category: "BUNDLES"
+    category: "RACING"
   },
   {
     id: 4,
@@ -102,7 +102,7 @@ export const initialProducts: Product[] = [
     ],
     description: "Retro-designed sunglasses with UV protection lenses to protect your eyes and add a unique style to your look.",
     longDescription: "Channel timeless cool with these vintage-inspired sunglasses. The classic frame shape is universally flattering, crafted from a high-quality, lightweight acetate for all-day comfort. The durable construction features robust hinges and a smooth, polished finish that speaks to its quality.\n\nMore than just a style statement, these sunglasses offer serious protection. The high-performance lenses provide 100% UVA and UVB protection, safeguarding your eyes from harmful rays while reducing glare for crisp, clear vision. Whether you're driving, lounging on the beach, or exploring the city, these shades are the perfect accessory to elevate your style and protect your sight.",
-    category: "SUMMERWEEN"
+    category: "FAMILY"
   },
   {
     id: 5,
@@ -125,22 +125,22 @@ export const initialProducts: Product[] = [
     ],
     description: "Made with soft, skin-friendly knit fabric, this turtleneck is warm and fashionable—a must-have for the autumn and winter seasons.",
     longDescription: "Embrace sophistication and warmth with our classic turtleneck sweater. Knitted from an exceptionally soft and breathable merino wool blend, this sweater provides cozy insulation without feeling bulky. The fabric has a gentle stretch, ensuring a comfortable, flattering fit that moves with you.\n\nThe timeless turtleneck design is both elegant and practical, perfect for layering under a jacket or wearing on its own. Ribbed detailing at the collar, cuffs, and hem adds a touch of texture and helps retain the sweater's shape. This versatile piece is a cornerstone of any cold-weather wardrobe, offering endless styling possibilities for both casual and formal occasions.",
-    category: "MERCH"
+    category: "EMERGENCY VEHICLES"
   },
   {
     id: 6,
-    name: "Smart Watch",
+    name: "VW Beetle",
     price: 199.00,
     rating: 4.9,
     reviewCount: 300,
     stock: 5,
     images: [
-      "https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg",
+      "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg",
       "https://images.pexels.com/photos/346804/pexels-photo-346804.jpeg",
       "https://images.pexels.com/photos/1720957/pexels-photo-1720957.jpeg",
       "https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg",
     ],
-    description: "A comprehensive smartwatch that tracks your health data, receives notifications, and supports multiple sports modes.",
+    description: "The VW Beetle toy car is a cute mini version of the classic bug-shaped ride..",
     longDescription: "Stay connected, informed, and motivated with our next-generation Smart Watch. Featuring a vibrant, high-resolution AMOLED display, this watch delivers crisp visuals and an intuitive user interface. It's equipped with advanced sensors to track key health metrics, including heart rate, blood oxygen levels, sleep patterns, and stress, providing you with a holistic view of your well-being.\n\nReceive notifications for calls, texts, and apps directly on your wrist. With built-in GPS and support for over 100 sports modes, it's the perfect companion for any workout. The long-lasting battery ensures you can go for days without a charge. Encased in a sleek, durable aluminum alloy frame and paired with a comfortable silicone strap, this smartwatch combines cutting-edge technology with sophisticated style.",
     category: "SUV",
     isNew: true
@@ -164,7 +164,7 @@ export const initialProducts: Product[] = [
     ],
     description: "Compact and portable wireless Bluetooth earbuds with clear sound and long-lasting battery for high-quality music on the go.",
     longDescription: "Immerse yourself in crystal-clear audio with our True Wireless Bluetooth Earbuds. Utilizing the latest Bluetooth 5.2 technology, they provide a fast, stable, and seamless connection to your devices. The custom-tuned dynamic drivers deliver rich bass, balanced mids, and crisp highs, bringing your music to life. Each earbud is ergonomically designed for a secure and comfortable fit, perfect for long listening sessions, workouts, or commutes.\n\nThe compact charging case provides multiple additional charges, extending your total playtime to over 24 hours. With intuitive touch controls, you can easily manage your music, answer calls, and access your voice assistant without reaching for your phone. Experience true wireless freedom and exceptional sound quality.",
-    category: "COLLABS",
+    category: "TRUCK",
     isNew: true
   },
   {
@@ -186,7 +186,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A one-touch professional coffee machine that makes various coffee flavors, allowing you to enjoy café-level deliciousness at home.",
     longDescription: "Become your own barista with our Professional Coffee Machine. This elegant, high-performance espresso maker features a powerful 15-bar pump and an advanced thermoblock heating system, ensuring optimal temperature and pressure for a perfect extraction every time. The integrated conical burr grinder provides consistent, fresh grounds on demand, with adjustable settings to suit your taste.\n\nThe intuitive interface with a clear LCD screen makes it easy to select and customize your drink, from a robust espresso to a creamy latte. The powerful steam wand produces rich, velvety microfoam, perfect for latte art. Housed in a durable stainless steel body, this machine is as beautiful as it is functional, bringing the authentic café experience right into your kitchen.",
-    category: "BUNDLES",
+    category: "RACING",
     isNew: true
   },
   {
@@ -209,7 +209,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A durable and stylish backpack designed for city life, with multiple compartments to keep your essentials organized.",
     longDescription: "Navigate the urban landscape with confidence with the Urban Explorer Backpack. Constructed from a water-resistant, high-density nylon fabric, this backpack is built to withstand the rigors of daily commuting and travel. The thoughtfully designed interior features a padded laptop sleeve that fits up to a 15-inch device, along with multiple organizer pockets for your phone, keys, and other accessories.\n\nThe ergonomic, padded shoulder straps and breathable back panel provide superior comfort, even when the bag is fully loaded. A secure, hidden pocket on the back offers a safe place for your wallet or passport. With its sleek, minimalist aesthetic and practical features, this backpack is the ideal choice for the modern professional, student, or traveler.",
-    category: "SUMMERWEEN",
+    category: "FAMILY",
     isNew: true
   },
   {
@@ -231,7 +231,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A comfortable cotton t-shirt featuring a unique, artistic graphic print. A perfect way to express your style.",
     longDescription: "Make a statement with our premium Graphic Print T-Shirt. Made from 100% ring-spun cotton, this tee is incredibly soft, breathable, and durable. The modern, athletic fit provides a flattering silhouette without being restrictive. The centerpiece of the shirt is a unique, high-quality graphic, printed using eco-friendly, water-based inks that are soft to the touch and resistant to cracking and fading.\n\nFeaturing a tagless neck label for added comfort and a reinforced shoulder seam for durability, this t-shirt is designed for everyday wear. It's a versatile piece that adds a touch of personality to any casual outfit, whether paired with jeans, shorts, or layered under a shirt.",
-    category: "MERCH",
+    category: "EMERGENCY VEHICLES",
     isNew: true
   },
   {
@@ -275,7 +275,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A beautifully designed ceramic mug with a comfortable handle, perfect for your favorite hot beverage.",
     longDescription: "Start your day right with our artisanal Ceramic Coffee Mug. Each mug is handcrafted by skilled potters, resulting in a unique piece with subtle variations in shape and glaze. Made from high-quality, durable stoneware, it's designed to retain heat, keeping your coffee or tea warm for longer. The ergonomic handle provides a comfortable and secure grip.\n\nThe mug features a beautiful, reactive glaze finish, creating a stunning visual texture that makes each sip a special experience. With its generous capacity, it's perfect for everything from your morning coffee to an evening hot chocolate. It's both microwave and dishwasher safe, combining artisanal beauty with everyday practicality.",
-    category: "COLLABS",
+    category: "TRUCK",
     isNew: true
   },
   {
@@ -297,7 +297,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A hand-poured soy wax candle with a relaxing scent to create a calming atmosphere in any room.",
     longDescription: "Create a serene and inviting ambiance with our hand-poured Scented Soy Candle. Made from 100% natural soy wax and infused with premium fragrance oils, this candle provides a clean, long-lasting burn with a rich and consistent scent throw. The lead-free cotton wick ensures a safe and soot-free experience.\n\nThe sophisticated fragrance profile features calming notes of lavender and chamomile, blended with a hint of vanilla and sandalwood to create a truly relaxing atmosphere. Poured into a stylish, reusable glass vessel, this candle not only smells divine but also serves as a chic decorative accent. It's the perfect way to unwind after a long day or to add a touch of warmth and elegance to your home.",
-    category: "BUNDLES",
+    category: "RACING",
     isNew: true
   },
    {
@@ -341,7 +341,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A beautifully crafted leather shoulder bag. Its minimalist design and exquisite details make it suitable for any event.",
     longDescription: "Elevate your accessory collection with this impeccably crafted shoulder bag, made from genuine, full-grain leather that will develop a rich patina over time. The structured silhouette is both modern and timeless, featuring clean lines and polished hardware for a touch of understated luxury. The main compartment, lined with soft yet durable twill, is surprisingly spacious and includes a secure interior zip pocket for your valuables and two slip pockets for easy organization.\n\nThe adjustable shoulder strap allows for versatile styling, letting you wear it comfortably on the shoulder or as a crossbody. Every detail, from the hand-stitched seams to the discreetly embossed logo, reflects a commitment to superior quality and craftsmanship. This bag is a statement of elegance that seamlessly transitions from day to night.",
-    category: "COLLABS"
+    category: "TRUCK"
   },
   {
     id: 16,
@@ -362,7 +362,7 @@ export const initialProducts: Product[] = [
     ],
     description: "Lightweight and simple, these sneakers provide excellent cushioning and support for ultimate comfort during exercise.",
     longDescription: "Discover the perfect blend of style and performance with our Minimalist Sneakers. Engineered with a lightweight, breathable knit upper, these shoes conform to the shape of your foot for a sock-like fit and superior ventilation. The responsive foam midsole provides exceptional cushioning and energy return with every step, reducing fatigue and maximizing comfort whether you're on a run or navigating a busy day.\n\nThe durable rubber outsole features a versatile traction pattern for reliable grip on various surfaces. With their clean, uncluttered design and subtle branding, these sneakers are the epitome of modern athletic footwear, effortlessly pairing with everything from workout gear to casual weekend wear.",
-    category: "BUNDLES"
+    category: "RACING"
   },
 ];
 

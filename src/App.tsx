@@ -1,14 +1,17 @@
+import { useRef } from 'react'; // 1. 導入 useRef
 import Navbar from './components/Navbar';
 import { useCart } from './hooks/useCart';
 import CartDrawer from './components/CartDrawer';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import AppRoutes from './components/AppRoutes';
-import { useProductData } from './hooks/useProductData'; // 1. 導入新的 Hook
+import { useProductData } from './hooks/useProductData';
 import { detailedReviews } from './components/data/reviews'; 
 
 function App() {
-  // --- 購物車相關邏輯 ---
+  const mainContainerRef = useRef<HTMLDivElement>(null); // 2. 創建一個 ref
+
+  // ... (其他的 Hooks 和邏輯保持不變)
   const { 
     cartItems, 
     handleAddToCart, 
@@ -20,7 +23,6 @@ function App() {
     closeCart
   } = useCart();
   
-  // --- 商品數據相關邏輯 (現在全部來自 useProductData Hook) ---
   const {
     allProducts,
     featuredProduct,
@@ -32,19 +34,19 @@ function App() {
     handleLoadMore,
   } = useProductData();
 
-
   if (!featuredProduct) {
     return <div>Loading...</div>;
   }
 
-  // --- 頁面佈局 (Layout) ---
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      <ScrollToTop />
+    // 3. 將 ref 綁定到最外層的 div 上
+    <div ref={mainContainerRef} className="flex flex-col h-screen overflow-y-auto bg-white overflow-x-hidden">
+      {/* 4. 將 ref 作為 prop 傳遞給 ScrollToTop */}
+      <ScrollToTop containerRef={mainContainerRef!} />
       <Navbar 
         cartItems={cartItems}
         onCartClick={openCart}
-        categories={['ALL', 'SUV', 'COLLABS', 'BUNDLES', 'SUMMERWEEN', 'MERCH']}
+        categories={['ALL', 'SUV', 'TRUCK', 'RACING', 'FAMILY', 'EMERGENCY VEHICLES']}
         selectedCategory={selectedCategory}
         onSelectCategory={handleSelectCategory}
         products={allProducts}
@@ -79,4 +81,3 @@ function App() {
 }
 
 export default App;
-

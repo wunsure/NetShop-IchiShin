@@ -1,18 +1,24 @@
-import { useEffect } from 'react';
+import { useEffect, type RefObject } from 'react'; // 1. 使用 type-only import
 import { useLocation } from 'react-router-dom';
 
-const ScrollToTop = () => {
-  // 獲取當前的路由位置
+// 2. 將 props 類型從 HTMLElement 改為更精確的 HTMLDivElement
+interface ScrollToTopProps {
+  containerRef: RefObject<HTMLDivElement| null>;
+}
+
+const ScrollToTop: React.FC<ScrollToTopProps> = ({ containerRef }) => {
   const { pathname } = useLocation();
 
-  // 使用 useEffect 來監聽 pathname 的變化
   useEffect(() => {
-    // 當 pathname 改變時，將窗口滾動到 (0, 0) 位置
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // 檢查 ref 是否存在並且指向一個有效的元素
+    if (containerRef?.current) {
+      // 直接操作這個元素的 scrollTop 屬性
+      containerRef.current.scrollTop = 0;
+    }
+  }, [pathname, containerRef]);
 
-  // 這個組件不渲染任何可見的內容
   return null;
 };
 
 export default ScrollToTop;
+

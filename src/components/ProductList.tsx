@@ -23,7 +23,7 @@ const ProductList: React.FC<ProductListProps> = ({
   return (
     <main id="product-list" className="py-16 px-4 md:px-32">
       {/* 3. 在這裡顯示分類標題 */}
-      <h1 className="text-3xl font-bold mb-8 my-16 text-center">
+      <h1 className="text-3xl text-gray-700 font-bold mb-8 my-16 text-center">
         {title}
       </h1>
 
