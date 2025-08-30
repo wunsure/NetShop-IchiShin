@@ -1,5 +1,5 @@
 // 定義產品物件的介面（型別）
-export type Category = 'KITS' | 'COLLABS' | 'BUNDLES' | 'SUMMERWEEN' | 'MERCH';
+export type Category = 'SUV' | 'COLLABS' | 'BUNDLES' | 'SUMMERWEEN' | 'MERCH';
 
 export interface Product {
   id: number;
@@ -16,7 +16,7 @@ export interface Product {
 }
 
 // 導出分類列表，方便在Navbar中使用
-export const categories: Category[] = ['KITS', 'COLLABS', 'BUNDLES', 'SUMMERWEEN', 'MERCH'];
+export const categories: Category[] = ['SUV', 'COLLABS', 'BUNDLES', 'SUMMERWEEN', 'MERCH'];
 
 // 導出我們的產品資料
 export const initialProducts: Product[] = [
@@ -28,18 +28,16 @@ export const initialProducts: Product[] = [
     reviewCount: 120,
     stock: 10, // 2. 為每個商品添加庫存
     images: [
-      "https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1020324/pexels-photo-1020324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2002967/pexels-photo-2002967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/54278/pexels-photo-54278.jpeg",
+      "https://images.pexels.com/photos/21014/pexels-photo.jpg",
+      "https://images.pexels.com/photos/981588/pexels-photo-981588.jpeg",
+      "https://images.pexels.com/photos/249343/pexels-photo-249343.jpeg",
+      "https://images.pexels.com/photos/16446/pexels-photo.jpg",
+      "https://images.pexels.com/photos/33659553/pexels-photo-33659553.jpeg",
     ],
     description: "A timeless pair of denim jeans, perfect for any occasion. Made with high-quality, durable fabric for a comfortable fit.",
     longDescription: "Crafted from premium 100% cotton denim, these classic straight-leg jeans offer both enduring style and exceptional comfort. The fabric is pre-washed for a soft, broken-in feel from the very first wear. Featuring a traditional five-pocket design, reinforced belt loops, and a secure zip fly with a button closure, these jeans are built to last. \n\nThe versatile medium-blue wash is achieved through a meticulous, eco-friendly process, giving each pair a unique character that will evolve over time. Whether dressed up with a blazer or down with a simple t-shirt, these jeans provide a clean, flattering silhouette that serves as the perfect foundation for any wardrobe.",
-    category: "KITS"
+    category: "SUV"
   },
   {
     id: 2,
@@ -49,12 +47,13 @@ export const initialProducts: Product[] = [
     reviewCount: 88,
     stock: 8,
     images: [
-      "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1040173/pexels-photo-1040173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1374910/pexels-photo-1374910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2442893/pexels-photo-2442893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1927383/pexels-photo-1927383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+     
+      "https://images.pexels.com/photos/1329310/pexels-photo-1329310.jpeg",
+      "https://images.pexels.com/photos/7123071/pexels-photo-7123071.jpeg",
+      "https://images.pexels.com/photos/3661193/pexels-photo-3661193.jpeg",
+       "https://images.pexels.com/photos/400951/pexels-photo-400951.jpeg",
+      "https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg",
+      "https://images.pexels.com/photos/8828674/pexels-photo-8828674.jpeg",
       "https://images.pexels.com/photos/2534961/pexels-photo-2534961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1639729/pexels-photo-1639729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1111322/pexels-photo-1111322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -71,7 +70,7 @@ export const initialProducts: Product[] = [
     reviewCount: 210,
     stock: 15,
     images: [
-      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/8014548/pexels-photo-8014548.jpeg",
       "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1032110/pexels-photo-1032110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -92,7 +91,7 @@ export const initialProducts: Product[] = [
     reviewCount: 55,
     stock: 20,
     images: [
-      "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg",
       "https://images.pexels.com/photos/1367243/pexels-photo-1367243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2835443/pexels-photo-2835443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -136,18 +135,14 @@ export const initialProducts: Product[] = [
     reviewCount: 300,
     stock: 5,
     images: [
-      "https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/110471/pexels-photo-110471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg",
+      "https://images.pexels.com/photos/346804/pexels-photo-346804.jpeg",
+      "https://images.pexels.com/photos/1720957/pexels-photo-1720957.jpeg",
+      "https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg",
     ],
     description: "A comprehensive smartwatch that tracks your health data, receives notifications, and supports multiple sports modes.",
     longDescription: "Stay connected, informed, and motivated with our next-generation Smart Watch. Featuring a vibrant, high-resolution AMOLED display, this watch delivers crisp visuals and an intuitive user interface. It's equipped with advanced sensors to track key health metrics, including heart rate, blood oxygen levels, sleep patterns, and stress, providing you with a holistic view of your well-being.\n\nReceive notifications for calls, texts, and apps directly on your wrist. With built-in GPS and support for over 100 sports modes, it's the perfect companion for any workout. The long-lasting battery ensures you can go for days without a charge. Encased in a sleek, durable aluminum alloy frame and paired with a comfortable silicone strap, this smartwatch combines cutting-edge technology with sophisticated style.",
-    category: "KITS",
+    category: "SUV",
     isNew: true
   },
   {
@@ -157,15 +152,15 @@ export const initialProducts: Product[] = [
     rating: 4.2,
     reviewCount: 95,
     stock: 30,
-    images: [
-      "https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/8037624/pexels-photo-8037624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7868067/pexels-photo-7868067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6284227/pexels-photo-6284227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/5081404/pexels-photo-5081404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4009626/pexels-photo-4009626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    images: [ 
+      "https://images.pexels.com/photos/772393/pexels-photo-772393.jpeg",
+      "https://images.pexels.com/photos/13499735/pexels-photo-13499735.jpeg",
+      "https://images.pexels.com/photos/3828253/pexels-photo-3828253.jpeg",
+      "https://images.pexels.com/photos/381228/pexels-photo-381228.jpeg",
+      "https://images.pexels.com/photos/35619/capri-ford-oldtimer-automotive.jpg",
+      "https://images.pexels.com/photos/33028688/pexels-photo-33028688.jpeg",
+      "https://images.pexels.com/photos/54277/pexels-photo-54277.jpeg",
+      "https://images.pexels.com/photos/1522185/pexels-photo-1522185.jpeg",
     ],
     description: "Compact and portable wireless Bluetooth earbuds with clear sound and long-lasting battery for high-quality music on the go.",
     longDescription: "Immerse yourself in crystal-clear audio with our True Wireless Bluetooth Earbuds. Utilizing the latest Bluetooth 5.2 technology, they provide a fast, stable, and seamless connection to your devices. The custom-tuned dynamic drivers deliver rich bass, balanced mids, and crisp highs, bringing your music to life. Each earbud is ergonomically designed for a secure and comfortable fit, perfect for long listening sessions, workouts, or commutes.\n\nThe compact charging case provides multiple additional charges, extending your total playtime to over 24 hours. With intuitive touch controls, you can easily manage your music, answer calls, and access your voice assistant without reaching for your phone. Experience true wireless freedom and exceptional sound quality.",
@@ -258,7 +253,7 @@ export const initialProducts: Product[] = [
     ],
     description: "Wrap yourself in warmth with this incredibly soft and cozy wool blanket, perfect for chilly evenings.",
     longDescription: "Experience unparalleled comfort with our Cozy Wool Blanket. Woven from a luxurious blend of natural wool and soft acrylic, this blanket offers the perfect balance of warmth, breathability, and durability. The generous size makes it ideal for snuggling on the couch, adding an extra layer of warmth to your bed, or even for outdoor picnics on a cool day.\n\nThe timeless herringbone pattern and classic fringed edges add a touch of rustic elegance to any home decor. The fabric is naturally hypoallergenic and resistant to pilling, ensuring it will remain a beautiful and comforting addition to your home for years to come. It's the perfect companion for relaxing moments and chilly nights.",
-    category: "KITS",
+    category: "SUV",
     isNew: true
   },
   {
@@ -324,7 +319,7 @@ export const initialProducts: Product[] = [
     ],
     description: "A timeless pair of denim jeans, perfect for any occasion. Made with high-quality, durable fabric for a comfortable fit.",
     longDescription: "Crafted from premium 100% cotton denim, these classic straight-leg jeans offer both enduring style and exceptional comfort. The fabric is pre-washed for a soft, broken-in feel from the very first wear. Featuring a traditional five-pocket design, reinforced belt loops, and a secure zip fly with a button closure, these jeans are built to last. \n\nThe versatile medium-blue wash is achieved through a meticulous, eco-friendly process, giving each pair a unique character that will evolve over time. Whether dressed up with a blazer or down with a simple t-shirt, these jeans provide a clean, flattering silhouette that serves as the perfect foundation for any wardrobe.",
-    category: "KITS"
+    category: "SUV"
   },
   {
     id: 15,

@@ -21,7 +21,7 @@ const ProductList: React.FC<ProductListProps> = ({
   const title = selectedCategory === 'ALL' ? 'All Products' : selectedCategory;
 
   return (
-    <main id="product-list" className="py-4 px-4 md:px-32">
+    <main id="product-list" className="py-16 px-4 md:px-32">
       {/* 3. 在這裡顯示分類標題 */}
       <h1 className="text-3xl font-bold mb-8 my-16 text-center">
         {title}
@@ -48,8 +48,8 @@ const ProductList: React.FC<ProductListProps> = ({
         {hasMore && (
         <div className="text-center pb-16">
           <button
-            onClick={onLoadMore} // ここでクリックイベントを監視しています
-            className="bg-black text-white px-8 py-3 font-semibold hover:bg-gray-800 transition-colors"
+            onClick={onLoadMore} 
+            className="bg-black text-white px-24 py-3 font-semibold hover:bg-gray-800 transition-colors"
           >
             MORE
           </button>

@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import ProductCard from './ProductCard';
 import { type Product } from './data/products';
-
-const ITEMS_PER_PAGE = 4; // 新品區塊每次加載4個
+import ProductCard from './ProductCard';
 
 interface NewArrivalsProps {
   products: Product[];
@@ -10,26 +8,20 @@ interface NewArrivalsProps {
 }
 
 const NewArrivals: React.FC<NewArrivalsProps> = ({ products, onAddToCart }) => {
-  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   const handleLoadMore = () => {
-    setVisibleCount(prevCount => prevCount + ITEMS_PER_PAGE);
+    setVisibleCount(prev => prev + 4);
   };
 
   const productsToShow = products.slice(0, visibleCount);
   const hasMore = visibleCount < products.length;
 
-  // 如果沒有新品，則不渲染此區塊
-  if (products.length === 0) {
-    return null;
-  }
-
   return (
-    <section className="py-8 px-8 md:px-32">
-      <h1 className="text-3xl font-bold my-16 text-center">
-        NEW ARRIVAL
-      </h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <section className="py-16 px-4 md:px-32">
+      <h2 className="text-3xl font-bold text-center mb-12">New Arrivals</h2>
+      {/* 1. grid-cols-1 を grid-cols-2 に変更 */}
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {productsToShow.map((product) => (
           <ProductCard
             key={product.id}
@@ -38,16 +30,16 @@ const NewArrivals: React.FC<NewArrivalsProps> = ({ products, onAddToCart }) => {
           />
         ))}
       </ul>
-      <div className="mt-12 text-center">
-        {hasMore && (
+      {hasMore && (
+        <div className="text-center mt-12">
           <button
             onClick={handleLoadMore}
-            className="bg-black text-white font-bold py-3 px-12 rounded-none hover:bg-gray-800 transition duration-300"
+            className="bg-black text-white px-24 py-3 font-semibold hover:bg-gray-800 transition-colors"
           >
             MORE
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };
